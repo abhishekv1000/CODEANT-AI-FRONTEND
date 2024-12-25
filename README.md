@@ -21,6 +21,7 @@ Ensure you have the following installed:
 - **Node.js** (Version 14 or higher)
 - **npm**
 
-For Clone 
-npm install
-npm start
+For Cone it:
+
+- npm install
+- npm start
