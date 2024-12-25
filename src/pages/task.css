@@ -1,0 +1,245 @@
+/* Style for the whole page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.repositories-page {
+    display: flex;
+}
+
+/* Sidebar logo section */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.sidebar img {
+    width: 40px;  /* Adjust the size of the logo */
+    height: 40px;  /* Adjust the size of the logo */
+    object-fit: cover;  /* Ensures the image fits within its container */
+}
+
+.sidebar h1 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    margin: 0;
+    display: inline-block;  /* Ensure the text appears inline with the image */
+    padding-left: 10px;  /* Adds space between the image and the text */
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.header h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+
+/* Buttons (Add Repository & Refresh) */
+.add-repo-button,
+.refresh-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.add-repo-button {
+    background-color: #007bff;
+    color: white;
+}
+
+.refresh-button {
+    color: #6c6a6a;
+    position: absolute;
+    right: 152px;
+}
+
+.add-repo-button:hover {
+    background-color: #0056b3;
+}
+
+/* Search Bar */
+/* Search Bar Container */
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    position: relative;
+    width: 100%;
+}
+
+/* Search Box */
+.search-bar {
+    border: 1px solid #ccc;
+    font-size: 14px;
+    color: #555;
+    padding: 8px 8px 8px 30px; /* Add space on the left for the icon */
+    box-sizing: border-box;
+ 
+    border-radius: 4px;
+    outline: none;
+}
+
+/* Search Icon */
+.search-icon {
+    position: absolute;
+    left: 10px; /* Position icon inside the search box */
+    color: #555;
+}
+
+/* Optional: Styling for the icon on hover */
+.search-bar:focus + .search-icon {
+    color: #007bff;
+}
+
+
+/* Repository List */
+.repo-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.repo-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+/* Sidebar Navigation */
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sidebar nav ul li {
+    font-size: 14px;
+    color: #555;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar nav ul li:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar nav ul li a:hover .fa {
+    color: white;
+}
+
+/* User Dropdown */
+.user-dropdown {
+    margin-top: 20px;
+}
+
+.dropdown {
+    font-size: 14px;
+    color: #555;
+    padding: 8px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+/* Miscellaneous Styling */
+.datas {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.bb {
+    display: flex;
+    gap: 3px;
+}
+
+.visibility {
+    padding: 2px 6px;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    color: #007bff;
+    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .repositories-page {
+        flex-direction: column; /* Stack sidebar and content */
+    }
+
+    .sidebar {
+        width: 100%; /* Full width for mobile */
+    }
+
+    .sidebar nav ul {
+        display: none; /* Hidden by default for hamburger */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger icon */
+    }
+
+    .main-content {
+        width: 100%;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .add-repo-button,
+    .refresh-button {
+        width: 100%; /* Full width for buttons */
+    }
+
+    .repo-item {
+        flex-direction: column;
+    }
+
+    .datas {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
